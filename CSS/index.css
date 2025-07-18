@@ -1,0 +1,64 @@
+/* Reset base CSS */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+/* General style */
+body {
+    font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
+    background-color: #f5f5f5;
+    color: #333;
+    line-height: 1.6;
+    padding: 2rem;
+}
+
+/* Main container */
+.container {
+    max-width: 800px;
+    margin: 0 auto;
+    background-color: #fff;
+    padding: 2rem;
+    border-radius: 8px;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.05);
+}
+
+/* Titles */
+h2 {
+    font-size: 1.5rem;
+    color: #0f62fe;
+    /* Bleu Holberton */
+    margin-bottom: 1rem;
+    border-bottom: 2px solid #0f62fe;
+    padding-bottom: 0.5rem;
+}
+
+/* Sub categories */
+ul {
+    list-style-type: none;
+    margin-left: 1rem;
+    margin-bottom: 2rem;
+}
+
+li {
+    padding: 0.5rem 0;
+    border-left: 4px solid #d0e2ff;
+    padding-left: 1rem;
+    transition: all 0.3s ease;
+}
+
+li:hover {
+    background-color: #edf5ff;
+    border-left-color: #0f62fe;
+    cursor: pointer;
+}
+
+/* Forum / FAQ */
+.forum {
+    font-style: italic;
+    color: #5c5c5c;
+    margin-top: 2rem;
+    border-top: 1px dashed #ccc;
+    padding-top: 1rem;
+}
