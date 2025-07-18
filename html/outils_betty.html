@@ -5,6 +5,65 @@
     <title>Betty - Votre Compagnon de Style</title>
 </head>
 <body>
-    <h1>Betty : Règles de Style et Utilisation</h1>
-    </body>
+    <h1>Betty : Règles de Style et Utilisation à Holberton School</h1>
+
+    <p>Betty est un outil central dans l'écosystème Holberton, en particulier pour les projets en langage C. Elle n'est pas là pour vous juger, mais pour vous guider et vous aider à écrire du code propre, lisible et conforme aux standards de l'école. La maîtriser est indispensable pour la validation de vos projets.</p>
+
+    ---
+
+    <h2>1. Qu'est-ce que Betty et Pourquoi est-elle Importante ?</h2>
+
+    <p>Betty est un script d'analyse statique de code qui vérifie la conformité de votre code C aux règles de style et de syntaxe définies par Holberton School. Son rôle est multiple :</p>
+    <ul>
+        <li>**Cohérence :** Assurer que tout le code produit par les étudiants d'Holberton suit les mêmes conventions, ce qui facilite la lecture et la collaboration.</li>
+        <li>**Lisibilité :** Un code bien formaté est plus facile à comprendre, non seulement pour les autres, mais aussi pour vous-même après plusieurs semaines ou mois.</li>
+        <li>**Bonnes Pratiques :** Betty enforce des pratiques de programmation qui sont considérées comme des standards de l'industrie pour la robustesse et la maintenabilité du code.</li>
+        <li>**Préparation à l'Industrie :** Les entreprises ont souvent leurs propres guides de style. Maîtriser Betty vous prépare à vous adapter à n'importe quel standard de code.</li>
+        <li>**Validation des Projets :** Vos projets en C doivent passer les checks de Betty pour être validés sur Hippocampe. Ignorer Betty, c'est risquer un échec au check !</li>
+    </ul>
+
+    ---
+
+    <h2>2. Comment Utiliser Betty (Les Commandes Essentielles)</h2>
+
+    <p>Utiliser Betty est simple, et cela doit devenir un réflexe avant chaque soumission de projet C.</p>
+    <h3>a. Vérifier un Fichier Spécifique</h3>
+    <p>Pour vérifier un seul fichier :</p>
+    <pre><code>betty votre_fichier.c</code></pre>
+    <p>Exemple : `betty main.c`</p>
+
+    <h3>b. Vérifier Tous les Fichiers C dans le Répertoire Courant</h3>
+    <p>Pour vérifier tous les fichiers `.c` et `.h` du répertoire courant :</p>
+    <pre><code>betty .</code></pre>
+    <p>Ou, de manière plus spécifique :</p>
+    <pre><code>betty *.c *.h</code></pre>
+
+    <h3>c. Comprendre la Sortie de Betty</h3>
+    <p>Betty affichera les erreurs et les avertissements. Chaque ligne d'erreur contient :</p>
+    <ul>
+        <li>Le nom du fichier.</li>
+        <li>Le numéro de ligne où l'erreur a été détectée.</li>
+        <li>Une description de l'erreur ou de la règle non respectée.</li>
+    </ul>
+    <p><strong>Exemple de sortie :</strong><br>
+    `main.c:10: [Whitespace/Indentation] missing space after comma` <br>
+    `_putchar.c:5: [LineLength] line is too long (85 > 80)`</p>
+
+    ---
+
+    <h2>3. Astuces et Erreurs Fréquentes avec Betty</h2>
+
+    <ul>
+        <li>**Vérifiez Souvent :** N'attendez pas d'avoir fini tout un projet pour faire tourner Betty. Vérifiez votre code petit à petit pour corriger les erreurs au fur et à mesure.</li>
+        <li>**Lisez les Messages :** Les messages de Betty sont très précis. Ils vous disent exactement où est le problème et souvent quel type d'erreur c'est.</li>
+        <li>**Ne Laissez Pas de Lignes Vides Inutiles :** Betty n'aime pas les lignes vides en fin de fichier ou trop de lignes vides consécutives.</li>
+        <li>**Indentation et Espaces :** Les problèmes d'indentation et d'espaces sont très courants. Assurez-vous que votre éditeur de texte est bien configuré pour les indentations Holberton (généralement 4 espaces).</li>
+        <li>**Commentaires :** Respectez le format des commentaires (notamment le "Holberton-style comment" en haut de chaque fichier et fonction).</li>
+        <li>**Longueur des Lignes :** Les lignes de code ne doivent pas dépasser 80 caractères (ou 78 pour les fonctions). Betty est très stricte là-dessus.</li>
+        <li>**Variables non utilisées :** Betty vous signalera les variables que vous déclarez mais n'utilisez jamais.</li>
+    </ul>
+
+    <p>Betty est votre amie, même si elle peut sembler exigeante au début. Elle vous force à développer de bonnes habitudes de codage qui vous seront utiles toute votre carrière !</p>
+
+</body>
 </html>

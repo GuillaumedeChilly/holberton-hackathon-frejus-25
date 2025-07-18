@@ -5,6 +5,76 @@
     <title>Les Checks Holberton - Comprendre vos Résultats</title>
 </head>
 <body>
-    <h1>Les Checks : Comment ça Marche ?</h1>
-    </body>
+    <h1>Les Checks Holberton : Comprendre et Réussir les Validations</h1>
+
+    <p>Les "checks" sont le système d'évaluation automatique de Holberton School. Chaque fois que vous poussez votre code sur GitHub, des scripts sont exécutés pour vérifier la conformité de votre travail aux exigences du projet. Comprendre comment lire et interpréter ces résultats est une compétence clé pour progresser et valider vos projets.</p>
+
+    ---
+
+    <h2>1. Qu'est-ce qu'un Check et Comment ça Fonctionne ?</h2>
+
+    <p>Un check est un ensemble de tests automatisés qui évaluent différents aspects de votre code :</p>
+    <ul>
+        <li>**Conformité Betty :** Vérification du style et des bonnes pratiques de codage (comme nous l'avons vu pour la page Betty).</li>
+        <li>**Fonctionnalité :** Est-ce que votre code fait ce qu'il est censé faire ? Les tests vérifient les entrées/sorties attendues.</li>
+        <li>**Contraintes Spécifiques :** Respect des restrictions (par exemple, pas de variables globales, pas de fonctions spécifiques, complexité cyclomatique...).</li>
+        <li>**Documentation :** Présence et conformité de la documentation (README, commentaires).</li>
+    </ul>
+    <p>Ces checks sont généralement déclenchés automatiquement après un `git push` vers votre dépôt GitHub lié au projet. Les résultats sont ensuite disponibles sur Hippocampe.</p>
+
+    ---
+
+    <h2>2. Lire et Interpréter les Résultats des Checks sur Hippocampe</h2>
+
+    <p>Quand vous consultez les résultats d'un check sur Hippocampe, vous verrez un résumé des tests passés et échoués. Chaque échec est accompagné d'un message qui est une indication précieuse pour corriger votre code.</p>
+    <ul>
+        <li>**Ligne Verte :** Le test est passé avec succès. Bravo !</li>
+        <li>**Ligne Rouge :** Le test a échoué. Cela signifie qu'il y a un problème.</li>
+        <li>**Messages d'Erreur :** Lisez attentivement le message associé à chaque échec. Il vous donne souvent :
+            <ul>
+                <li>Le type de l'erreur (ex: `Output difference`, `Betty error`, `Memory leak`).</li>
+                <li>Le contexte (le fichier concerné, parfois la ligne ou la fonction).</li>
+                <li>La raison de l'échec (ex: "votre programme n'a pas affiché la bonne sortie", "ligne trop longue").</li>
+            </ul>
+        </li>
+        <li>**Exemple de ce que vous pouvez voir :**
+            <pre><code>[+] test 0: main.c - OK
+[x] test 1: output_check.c - Failed
+    > Expected "Hello, Holberton\n" but got "Hello Holberton\n" (missing comma)
+[x] test 2: betty_check.c - Failed
+    > main.c:5: [LineLength] line is too long (85 > 80)</code></pre>
+        </li>
+    </ul>
+    <p>Chaque échec est une opportunité d'apprendre. Ne vous découragez pas ; c'est un processus d'amélioration continue.</p>
+
+    ---
+
+    <h2>3. Corriger et Re-soumettre : Le Cycle Essentiel</h2>
+
+    <p>Le processus de correction et de re-soumission est une compétence fondamentale à Holberton. C'est le cycle d'itération que vous utiliserez constamment :</p>
+    <ol>
+        <li>**Analysez l'Échec :** Lisez le message d'erreur attentivement. Qu'est-ce que le check attendait et qu'est-ce que votre code a fait ?</li>
+        <li>**Localisez le Problème :** Identifiez la ou les parties de votre code qui sont à l'origine de l'échec.</li>
+        <li>**Corrigez le Code :** Apportez les modifications nécessaires.</li>
+        <li>**Testez Localement :** Avant de pousser, testez votre code sur votre machine. Utilisez Betty si c'est une erreur de style.</li>
+        <li>**Ajoutez, Commitez, Poussez :**
+            <pre><code>git add .
+git commit -m "fix: Resolve output_check error for task 1"
+git push</code></pre>
+        </li>
+        <li>**Vérifiez à Nouveau sur Hippocampe :** Attendez que les nouveaux checks se lancent et consultez les résultats. Si l'erreur persiste, recommencez le cycle !</li>
+    </ol>
+    <p>Pensez à chaque échec comme un puzzle à résoudre. La persévérance est la clé !</p>
+
+    ---
+
+    <h2>Conseils pour Maîtriser les Checks</h2>
+    <ul>
+        <li>**Ne Gagnez Pas de Temps :** Ne tentez pas de "contourner" les checks. Ils sont là pour vous faire apprendre.</li>
+        <li>**Posez des Questions :** Si vous ne comprenez pas un message d'erreur après recherche, demandez de l'aide à vos pairs ou aux facilitateurs.</li>
+        <li>**La Documentation est Votre Amie :** Souvent, la solution à un échec se trouve dans la documentation du projet ou dans les ressources liées.</li>
+        <li>**Petits Commits :** Faites de petits commits avec des messages clairs. Si un check échoue, vous saurez plus facilement quelle modification est à l'origine du problème.</li>
+    </ul>
+
+</body>
 </html>
