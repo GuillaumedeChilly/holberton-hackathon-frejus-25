@@ -8,7 +8,6 @@
     <link rel="stylesheet" href="../CSS/index.css">
 </head>
 <body>
-    <!-- Navbar sticky -->
     <nav class="navbar">
         <div class="nav-container">
             <a href="../index.html" class="nav-logo">
@@ -58,12 +57,10 @@
     </nav>
 
     <div class="container">
-        <header>
-            <h1>
-                <img src="../assets/logo.png" alt="Logo Holberton" class="logo">
-                GitHub : Comprendre et Utiliser
-            </h1>
-        </header>
+        <h1>
+            <img src="../assets/logo.png" alt="Logo Holberton">
+            GitHub : Comprendre et Utiliser
+        </h1>
 
         <a href="../index.html" class="back-home">← Retour à l'accueil</a>
 
@@ -72,70 +69,70 @@
         <h2>1. Qu'est-ce que GitHub et Git ? (La Différence Essentielle)</h2>
 
         <h3>a. Git : Le Système de Contrôle de Version</h3>
-        <p><strong>Git</strong> est un **système de contrôle de version distribué**. C'est un logiciel qui tourne sur votre ordinateur local et qui permet de :</p>
+        <p><strong>Git</strong> est un <strong>système de contrôle de version distribué</strong>. C'est un logiciel qui tourne sur votre ordinateur local et qui permet de :</p>
         <ul>
-            <li>**Suivre les modifications :** Il enregistre toutes les modifications apportées à vos fichiers.</li>
-            <li>**Revenir en arrière :** Vous pouvez revenir à n'importe quelle version précédente de votre code.</li>
-            <li>**Travailler en équipe :** Il gère les fusions de code de plusieurs personnes sans les écraser.</li>
+            <li><strong>Suivre les modifications :</strong> Il enregistre toutes les modifications apportées à vos fichiers.</li>
+            <li><strong>Revenir en arrière :</strong> Vous pouvez revenir à n'importe quelle version précédente de votre code.</li>
+            <li><strong>Travailler en équipe :</strong> Il gère les fusions de code de plusieurs personnes sans les écraser.</li>
         </ul>
         <p>Pensez à Git comme à une machine à remonter le temps pour votre code !</p>
 
         <h3>b. GitHub : La Plateforme d'Hébergement et de Collaboration</h3>
-        <p><strong>GitHub</strong> est une **plateforme web** qui utilise Git. C'est un service en ligne qui vous permet de :</p>
+        <p><strong>GitHub</strong> est une <strong>plateforme web</strong> qui utilise Git. C'est un service en ligne qui vous permet de :</p>
         <ul>
-            <li>**Héberger vos dépôts Git :** Vos projets Git sont stockés sur des serveurs distants.</li>
-            <li>**Collaborer :** Facilite le travail d'équipe avec des fonctionnalités comme les Pull Requests, la gestion des issues (problèmes), etc.</li>
-            <li>**Partager votre travail :** Votre code est accessible publiquement (ou privément) et sert de portfolio.</li>
+            <li><strong>Héberger vos dépôts Git :</strong> Vos projets Git sont stockés sur des serveurs distants.</li>
+            <li><strong>Collaborer :</strong> Facilite le travail d'équipe avec des fonctionnalités comme les Pull Requests, la gestion des issues (problèmes), etc.</li>
+            <li><strong>Partager votre travail :</strong> Votre code est accessible publiquement (ou privément) et sert de portfolio.</li>
         </ul>
         <p>GitHub est le "réseau social" des développeurs, et Git est le langage qu'ils utilisent.</p>
 
         <h2>2. Concepts Clés de GitHub / Git à Holberton</h2>
 
         <ul>
-            <li>**Dépôt (Repository / Repo) :** Le dossier de votre projet géré par Git. Il contient tout votre code, vos fichiers et l'historique des modifications.</li>
-            <li>**Cloner (`clone`) :** Télécharger une copie d'un dépôt distant (GitHub) sur votre machine locale.</li>
-            <li>**Ajouter (`add`) :** Préparer les fichiers modifiés pour le prochain "enregistrement" (commit). C'est la "zone de staging".</li>
-            <li>**Commiter (`commit`) :** Enregistrer une nouvelle version de vos modifications dans l'historique local de votre dépôt. C'est une "photo" de l'état de votre projet à un instant T, avec un message descriptif.</li>
-            <li>**Pousser (`push`) :** Envoyer vos commits locaux du dépôt de votre machine vers le dépôt distant sur GitHub. C'est comme "publier" vos modifications.</li>
-            <li>**Puller (`pull`) :** Récupérer les dernières modifications du dépôt distant vers votre dépôt local. C'est comme "télécharger" les mises à jour des autres membres de l'équipe.</li>
-            <li>**Branche (`branch`) :** Une ligne de développement indépendante. Vous travaillez généralement sur des branches séparées (`feature/ma-nouvelle-fonctionnalite`) avant de fusionner vos changements dans la branche principale (`main` ou `master`).</li>
-            <li>**Merge (`merge`) :** Fusionner les changements d'une branche dans une autre.</li>
-            <li>**Pull Request (PR) :** Sur GitHub, c'est une demande de fusion de votre branche vers une autre. C'est l'occasion de demander une relecture de votre code avant l'intégration.</li>
+            <li><strong>Dépôt (Repository / Repo) :</strong> Le dossier de votre projet géré par Git. Il contient tout votre code, vos fichiers et l'historique des modifications.</li>
+            <li><strong>Cloner (<code>clone</code>) :</strong> Télécharger une copie d'un dépôt distant (GitHub) sur votre machine locale.</li>
+            <li><strong>Ajouter (<code>add</code>) :</strong> Préparer les fichiers modifiés pour le prochain "enregistrement" (commit). C'est la "zone de staging".</li>
+            <li><strong>Commiter (<code>commit</code>) :</strong> Enregistrer une nouvelle version de vos modifications dans l'historique local de votre dépôt. C'est une "photo" de l'état de votre projet à un instant T, avec un message descriptif.</li>
+            <li><strong>Pousser (<code>push</code>) :</strong> Envoyer vos commits locaux du dépôt de votre machine vers le dépôt distant sur GitHub. C'est comme "publier" vos modifications.</li>
+            <li><strong>Puller (<code>pull</code>) :</strong> Récupérer les dernières modifications du dépôt distant vers votre dépôt local. C'est comme "télécharger" les mises à jour des autres membres de l'équipe.</li>
+            <li><strong>Branche (<code>branch</code>) :</strong> Une ligne de développement indépendante. Vous travaillez généralement sur des branches séparées (<code>feature/ma-nouvelle-fonctionnalite</code>) avant de fusionner vos changements dans la branche principale (<code>main</code> ou <code>master</code>).</li>
+            <li><strong>Merge (<code>merge</code>) :</strong> Fusionner les changements d'une branche dans une autre.</li>
+            <li><strong>Pull Request (PR) :</strong> Sur GitHub, c'est une demande de fusion de votre branche vers une autre. C'est l'occasion de demander une relecture de votre code avant l'intégration.</li>
         </ul>
 
         <h2>3. Commandes Git Essentielles pour Débuter</h2>
 
         <p>Voici les commandes que vous utiliserez le plus souvent :</p>
         <ul>
-            <li>**Initialiser un nouveau dépôt (une seule fois par projet) :**
+            <li><strong>Initialiser un nouveau dépôt (une seule fois par projet) :</strong>
                 <pre><code>git init</code></pre>
             </li>
-            <li>**Cloner un dépôt existant (une seule fois) :**
+            <li><strong>Cloner un dépôt existant (une seule fois) :</strong>
                 <pre><code>git clone [URL_DU_DEPOT]</code></pre>
             </li>
-            <li>**Vérifier le statut de votre dépôt (très souvent) :**
+            <li><strong>Vérifier le statut de votre dépôt (très souvent) :</strong>
                 <pre><code>git status</code></pre>
             </li>
-            <li>**Ajouter tous les fichiers modifiés/nouveaux à l'index :**
+            <li><strong>Ajouter tous les fichiers modifiés/nouveaux à l'index :</strong>
                 <pre><code>git add .</code></pre>
                 <p>Ou un fichier spécifique :</p>
                 <pre><code>git add nom_du_fichier.c</code></pre>
             </li>
-            <li>**Enregistrer vos modifications :**
+            <li><strong>Enregistrer vos modifications :</strong>
                 <pre><code>git commit -m "Message descriptif de votre commit"</code></pre>
             </li>
-            <li>**Envoyer vos commits vers GitHub (après `add` et `commit`) :**
+            <li><strong>Envoyer vos commits vers GitHub (après <code>add</code> et <code>commit</code>) :</strong>
                 <pre><code>git push</code></pre>
                 <p>Si c'est la première fois sur une nouvelle branche :</p>
                 <pre><code>git push -u origin nom-de-ma-branche</code></pre>
             </li>
-            <li>**Récupérer les dernières modifications des autres :**
+            <li><strong>Récupérer les dernières modifications des autres :</strong>
                 <pre><code>git pull</code></pre>
             </li>
-            <li>**Changer de branche :**
+            <li><strong>Changer de branche :</strong>
                 <pre><code>git checkout nom-de-la-branche</code></pre>
             </li>
-            <li>**Créer une nouvelle branche et s'y déplacer :**
+            <li><strong>Créer une nouvelle branche et s'y déplacer :</strong>
                 <pre><code>git checkout -b nom-de-la-nouvelle-branche</code></pre>
             </li>
         </ul>
@@ -144,12 +141,12 @@
 
         <p>À Holberton, vos projets sont directement liés à GitHub et Hippocampe. Un bon usage de Git et GitHub est essentiel pour :</p>
         <ul>
-            <li>**La soumission de vos projets :** Les checks automatiques sont déclenchés par vos `git push`.</li>
-            <li>**La collaboration :** Pour les projets de groupe, Git et GitHub sont les outils principaux pour travailler ensemble.</li>
-            <li>**Votre portfolio :** Votre profil GitHub devient votre CV en ligne, montrant votre code et votre contribution.</li>
-            <li>**Le suivi de progression :** L'historique de vos commits et la gestion de vos branches reflètent votre rigueur.</li>
+            <li><strong>La soumission de vos projets :</strong> Les checks automatiques sont déclenchés par vos <code>git push</code>.</li>
+            <li><strong>La collaboration :</strong> Pour les projets de groupe, Git et GitHub sont les outils principaux pour travailler ensemble.</li>
+            <li><strong>Votre portfolio :</strong> Votre profil GitHub devient votre CV en ligne, montrant votre code et votre contribution.</li>
+            <li><strong>Le suivi de progression :</strong> L'historique de vos commits et la gestion de vos branches reflètent votre rigueur.</li>
         </ul>
-        <p>Prenez le temps de pratiquer ces commandes. Plus vous les utiliserez, plus elles deviendront naturelles !</p>
+        <p>Prenez le temps de pratiquer ces commandes. Plus vous les utiliserez, plus elles deviendront naturelles ! Le staff utilise également GitHub pour suivre l'avancement des projets et fournir du feedback.</p>
 
         <div class="forum">
             <p><strong>💡 Conseil :</strong> Créez votre compte GitHub dès le début de votre formation et commencez à commiter régulièrement. Votre historique de commits sera un excellent indicateur de votre progression !</p>
