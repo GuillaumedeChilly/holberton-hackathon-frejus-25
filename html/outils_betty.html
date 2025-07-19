@@ -1,85 +1,123 @@
 <!DOCTYPE html>
 <html lang="fr">
 <head>
+    <link rel="icon" type="image/png" href="../assets/logo.png">
     <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Betty - Votre Compagnon de Style</title>
     <link rel="stylesheet" href="../CSS/index.css">
 </head>
 <body>
-
-    <header>
-        <nav>
-            <ul>
-                <li><a href="index.html">Accueil</a></li>
-                <li><a href="evenements.html">Évènements</a></li>
-                <li><a href="administratif.html">Administratif</a></li>
-                <li><a href="deroule.html">Déroulé Étudiant</a></li>
-                <li><a href="faq.html">Forum / FAQ</a></li>
+    <!-- Navbar sticky -->
+    <nav class="navbar">
+        <div class="nav-container">
+            <a href="../index.html" class="nav-logo">
+                <img src="../assets/logo.png" alt="Logo Holberton">
+                Holberton School
+            </a>
+            <ul class="nav-menu">
+                <li class="dropdown">
+                    <a href="#" class="dropdown-toggle">Evènements</a>
+                    <div class="dropdown-menu">
+                        <a href="events_local.html">Local</a>
+                        <a href="events_france.html">France</a>
+                        <a href="events_international.html">International</a>
+                    </div>
+                </li>
+                <li class="dropdown">
+                    <a href="#" class="dropdown-toggle">Administratif</a>
+                    <div class="dropdown-menu">
+                        <a href="admin_transition_pro.html">Projet transition pro</a>
+                        <a href="admin_financement.html">Financement personnel</a>
+                        <a href="admin_pole_emploi.html">Pôle emploi</a>
+                        <a href="admin_rsa.html">RSA</a>
+                    </div>
+                </li>
+                <li class="dropdown">
+                    <a href="#" class="dropdown-toggle">Vie étudiante</a>
+                    <div class="dropdown-menu">
+                        <a href="deroule_hippocampe.html">Hippocampe</a>
+                        <a href="deroule_trimestre.html">Trimestre</a>
+                        <a href="deroule_projets_perso.html">Projets perso</a>
+                        <a href="deroule_projet_fin_annee.html">Projet fin d'année</a>
+                        <a href="deroule_projets_groupe.html">Projets de groupe</a>
+                        <a href="deroule_tasks_projets.html">Déroulement des tasks / projets</a>
+                    </div>
+                </li>
+                <li class="dropdown">
+                    <a href="#" class="dropdown-toggle">Outils</a>
+                    <div class="dropdown-menu">
+                        <a href="outils_github.html">Github c'est quoi ?</a>
+                        <a href="outils_sandbox.html">Sandbox c'est quoi ?</a>
+                        <a href="outils_betty.html">Betty</a>
+                        <a href="outils_checks.html">Checks</a>
+                    </div>
+                </li>
             </ul>
-        </nav>
-    </header>
-
-    <h1>Betty : Règles de Style et Utilisation à Holberton School</h1>
-
-    <p>Betty est un outil central dans l'écosystème Holberton...</p>
-
-    <hr />
-
-    <h2>1. Qu'est-ce que Betty et Pourquoi est-elle Importante ?</h2>
-    <ul>
-        <li><strong>Cohérence :</strong> Assurer que tout le code produit suit les mêmes conventions...</li>
-        <li><strong>Lisibilité :</strong> Un code bien formaté est plus facile à comprendre...</li>
-        <li><strong>Bonnes Pratiques :</strong> Betty impose des pratiques robustes...</li>
-        <li><strong>Préparation à l'Industrie :</strong> Maîtriser Betty vous prépare à suivre des standards professionnels.</li>
-        <li><strong>Validation des Projets :</strong> Vos projets en C doivent passer Betty pour être validés.</li>
-    </ul>
-
-    <hr />
-
-    <h2>2. Comment Utiliser Betty (Les Commandes Essentielles)</h2>
-
-    <h3>a. Vérifier un Fichier Spécifique</h3>
-    <pre><code>betty votre_fichier.c</code></pre>
-
-    <h3>b. Vérifier Tous les Fichiers C dans le Répertoire Courant</h3>
-    <pre><code>betty .</code></pre>
-    <pre><code>betty *.c *.h</code></pre>
-
-    <h3>c. Comprendre la Sortie de Betty</h3>
-    <ul>
-        <li>Nom du fichier</li>
-        <li>Numéro de ligne</li>
-        <li>Description de l’erreur</li>
-    </ul>
-    <p><strong>Exemple :</strong><br>
-    main.c:10: [Whitespace/Indentation] missing space after comma<br>
-    _putchar.c:5: [LineLength] line is too long (85 &gt; 80)</p>
-
-    <hr />
-
-    <h2>3. Astuces et Erreurs Fréquentes avec Betty</h2>
-    <ul>
-        <li><strong>Vérifiez Souvent :</strong> Ne pas attendre la fin pour lancer Betty.</li>
-        <li><strong>Lisez les Messages :</strong> Ils sont précis et utiles.</li>
-        <li><strong>Lignes Vides :</strong> Évitez celles qui sont inutiles.</li>
-        <li><strong>Indentation :</strong> Configurez votre éditeur pour 4 espaces.</li>
-        <li><strong>Commentaires :</strong> Respectez le style Holberton.</li>
-        <li><strong>Lignes Trop Longues :</strong> Limitez à 80 caractères.</li>
-        <li><strong>Variables Non Utilisées :</strong> Supprimez-les.</li>
-    </ul>
-
-    <p>Betty est votre amie, même si elle peut sembler exigeante au début...</p>
+        </div>
+    </nav>
 
     <div class="container">
-        <a href="index.html">&larr; Retour à l'accueil</a>
-        <h2>Betty : Règles de Style et Utilisation</h2>
-        <p>Apprenez à utiliser Betty pour vérifier le style de votre code C selon les standards Holberton.</p>
+        <header>
+            <h1>
+                <img src="../assets/logo.png" alt="Logo Holberton" class="logo">
+                Betty : Comprendre et l'utiliser
+            </h1>
+        </header>
+
+        <a href="../index.html" class="back-home">← Retour à l'accueil</a>
+
+        <p>Betty est un outil central dans l'écosystème Holberton. C'est un vérificateur de style de code qui s'assure que votre code C respecte les standards et conventions établis par l'école. Maîtriser Betty est essentiel pour réussir vos projets et développer de bonnes pratiques de programmation.</p>
+
+        <h2>1. Qu'est-ce que Betty et Pourquoi est-elle Importante ?</h2>
+        <ul>
+            <li><strong>Cohérence :</strong> Assurer que tout le code produit suit les mêmes conventions, facilitant la lecture et la maintenance.</li>
+            <li><strong>Lisibilité :</strong> Un code bien formaté est plus facile à comprendre pour vous et vos collègues.</li>
+            <li><strong>Bonnes Pratiques :</strong> Betty impose des pratiques robustes qui vous serviront dans votre carrière.</li>
+            <li><strong>Préparation à l'Industrie :</strong> Maîtriser Betty vous prépare à suivre des standards professionnels.</li>
+            <li><strong>Validation des Projets :</strong> Vos projets en C doivent passer Betty pour être validés.</li>
+        </ul>
+
+        <h2>2. Comment Utiliser Betty (Les Commandes Essentielles)</h2>
+
+        <h3>a. Vérifier un Fichier Spécifique</h3>
+        <pre><code>betty votre_fichier.c</code></pre>
+
+        <h3>b. Vérifier Tous les Fichiers C dans le Répertoire Courant</h3>
+        <pre><code>betty .</code></pre>
+        <pre><code>betty *.c *.h</code></pre>
+
+        <h3>c. Comprendre la Sortie de Betty</h3>
+        <ul>
+            <li>Nom du fichier</li>
+            <li>Numéro de ligne</li>
+            <li>Description de l'erreur</li>
+        </ul>
+        <p><strong>Exemple :</strong><br>
+        main.c:10: [Whitespace/Indentation] missing space after comma<br>
+        _putchar.c:5: [LineLength] line is too long (85 &gt; 80)</p>
+
+        <h2>3. Astuces et Erreurs Fréquentes avec Betty</h2>
+        <ul>
+            <li><strong>Vérifiez Souvent :</strong> Ne pas attendre la fin pour lancer Betty.</li>
+            <li><strong>Lisez les Messages :</strong> Ils sont précis et utiles.</li>
+            <li><strong>Lignes Vides :</strong> Évitez celles qui sont inutiles.</li>
+            <li><strong>Indentation :</strong> Configurez votre éditeur pour 4 espaces.</li>
+            <li><strong>Commentaires :</strong> Respectez le style Holberton.</li>
+            <li><strong>Lignes Trop Longues :</strong> Limitez à 80 caractères.</li>
+            <li><strong>Variables Non Utilisées :</strong> Supprimez-les.</li>
+        </ul>
+
+        <p>Betty est votre amie, même si elle peut sembler exigeante au début. Plus vous l'utiliserez, plus votre code deviendra propre et professionnel !</p>
+
+        <div class="forum">
+            <p><strong>💡 Conseil :</strong> Configurez votre éditeur pour afficher une règle à 80 caractères et utilisez l'indentation automatique. Cela vous aidera à respecter Betty dès le début !</p>
+        </div>
     </div>
 
     <footer>
-        <p>&copy; 2025 - Projet étudiant Holberton. Tous droits réservés.</p>
-        <p>Contact : <a href="mailto:contact@holberton.school">contact@holberton.school</a></p>
+        <p>&copy; 2025 - Site pédagogique Holberton. Tous droits réservés.</p>
+        <p><a href="#">Conditions Générales</a> | <a href="#">Politique de Confidentialité</a></p>
     </footer>
-
 </body>
 </html>

@@ -1,114 +1,164 @@
 <!DOCTYPE html>
 <html lang="fr">
 <head>
+    <link rel="icon" type="image/png" href="../assets/logo.png">
     <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>GitHub : C'est Quoi ? - Outils Holberton</title>
     <link rel="stylesheet" href="../CSS/index.css">
 </head>
 <body>
-    <header>
-        <h1>GitHub : Comprendre et Utiliser pour votre Parcours Holberton</h1>
-    </header>
-    <p>GitHub est la plateforme de référence mondiale pour l'hébergement de projets de développement et la collaboration. À Holberton School, vous utiliserez GitHub quotidiennement pour gérer vos projets individuels et de groupe. Maîtriser ses concepts et ses commandes est une compétence fondamentale.</p>
-
-    ---
-
-    <h2>1. Qu'est-ce que GitHub et Git ? (La Différence Essentielle)</h2>
-
-    <h3>a. Git : Le Système de Contrôle de Version</h3>
-    <p><strong>Git</strong> est un **système de contrôle de version distribué**. C'est un logiciel qui tourne sur votre ordinateur local et qui permet de :</p>
-    <ul>
-        <li>**Suivre les modifications :** Il enregistre toutes les modifications apportées à vos fichiers.</li>
-        <li>**Revenir en arrière :** Vous pouvez revenir à n'importe quelle version précédente de votre code.</li>
-        <li>**Travailler en équipe :** Il gère les fusions de code de plusieurs personnes sans les écraser.</li>
-    </ul>
-    <p>Pensez à Git comme à une machine à remonter le temps pour votre code !</p>
-
-    <h3>b. GitHub : La Plateforme d'Hébergement et de Collaboration</h3>
-    <p><strong>GitHub</strong> est une **plateforme web** qui utilise Git. C'est un service en ligne qui vous permet de :</p>
-    <ul>
-        <li>**Héberger vos dépôts Git :** Vos projets Git sont stockés sur des serveurs distants.</li>
-        <li>**Collaborer :** Facilite le travail d'équipe avec des fonctionnalités comme les Pull Requests, la gestion des issues (problèmes), etc.</li>
-        <li>**Partager votre travail :** Votre code est accessible publiquement (ou privément) et sert de portfolio.</li>
-    </ul>
-    <p>GitHub est le "réseau social" des développeurs, et Git est le langage qu'ils utilisent.</p>
-
-    ---
-
-    <h2>2. Concepts Clés de GitHub / Git à Holberton</h2>
-
-    <ul>
-        <li>**Dépôt (Repository / Repo) :** Le dossier de votre projet géré par Git. Il contient tout votre code, vos fichiers et l'historique des modifications.</li>
-        <li>**Cloner (`clone`) :** Télécharger une copie d'un dépôt distant (GitHub) sur votre machine locale.</li>
-        <li>**Ajouter (`add`) :** Préparer les fichiers modifiés pour le prochain "enregistrement" (commit). C'est la "zone de staging".</li>
-        <li>**Commiter (`commit`) :** Enregistrer une nouvelle version de vos modifications dans l'historique local de votre dépôt. C'est une "photo" de l'état de votre projet à un instant T, avec un message descriptif.</li>
-        <li>**Pousser (`push`) :** Envoyer vos commits locaux du dépôt de votre machine vers le dépôt distant sur GitHub. C'est comme "publier" vos modifications.</li>
-        <li>**Puller (`pull`) :** Récupérer les dernières modifications du dépôt distant vers votre dépôt local. C'est comme "télécharger" les mises à jour des autres membres de l'équipe.</li>
-        <li>**Branche (`branch`) :** Une ligne de développement indépendante. Vous travaillez généralement sur des branches séparées (`feature/ma-nouvelle-fonctionnalite`) avant de fusionner vos changements dans la branche principale (`main` ou `master`).</li>
-        <li>**Merge (`merge`) :** Fusionner les changements d'une branche dans une autre.</li>
-        <li>**Pull Request (PR) :** Sur GitHub, c'est une demande de fusion de votre branche vers une autre. C'est l'occasion de demander une relecture de votre code avant l'intégration.</li>
-    </ul>
-
-    ---
-
-    <h2>3. Commandes Git Essentielles pour Débuter</h2>
-
-    <p>Voici les commandes que vous utiliserez le plus souvent :</p>
-    <ul>
-        <li>**Initialiser un nouveau dépôt (une seule fois par projet) :**
-            <pre><code>git init</code></pre>
-        </li>
-        <li>**Cloner un dépôt existant (une seule fois) :**
-            <pre><code>git clone [URL_DU_DEPOT]</code></pre>
-        </li>
-        <li>**Vérifier le statut de votre dépôt (très souvent) :**
-            <pre><code>git status</code></pre>
-        </li>
-        <li>**Ajouter tous les fichiers modifiés/nouveaux à l'index :**
-            <pre><code>git add .</code></pre>
-            <p>Ou un fichier spécifique :</p>
-            <pre><code>git add nom_du_fichier.c</code></pre>
-        </li>
-        <li>**Enregistrer vos modifications :**
-            <pre><code>git commit -m "Message descriptif de votre commit"</code></pre>
-        </li>
-        <li>**Envoyer vos commits vers GitHub (après `add` et `commit`) :**
-            <pre><code>git push</code></pre>
-            <p>Si c'est la première fois sur une nouvelle branche :</p>
-            <pre><code>git push -u origin nom-de-ma-branche</code></pre>
-        </li>
-        <li>**Récupérer les dernières modifications des autres :**
-            <pre><code>git pull</code></pre>
-        </li>
-        <li>**Changer de branche :**
-            <pre><code>git checkout nom-de-la-branche</code></pre>
-        </li>
-        <li>**Créer une nouvelle branche et s'y déplacer :**
-            <pre><code>git checkout -b nom-de-la-nouvelle-branche</code></pre>
-        </li>
-    </ul>
-
-    ---
-
-    <h2>4. L'Importance de GitHub à Holberton</h2>
-
-    <p>À Holberton, vos projets sont directement liés à GitHub et Hippocampe. Un bon usage de Git et GitHub est essentiel pour :</p>
-    <ul>
-        <li>**La soumission de vos projets :** Les checks automatiques sont déclenchés par vos `git push`.</li>
-        <li>**La collaboration :** Pour les projets de groupe, Git et GitHub sont les outils principaux pour travailler ensemble.</li>
-        <li>**Votre portfolio :** Votre profil GitHub devient votre CV en ligne, montrant votre code et votre contribution.</li>
-        <li>**Le suivi de progression :** L'historique de vos commits et la gestion de vos branches reflètent votre rigueur.</li>
-    </ul>
-    <p>Prenez le temps de pratiquer ces commandes. Plus vous les utiliserez, plus elles deviendront naturelles !</p>
+    <!-- Navbar sticky -->
+    <nav class="navbar">
+        <div class="nav-container">
+            <a href="../index.html" class="nav-logo">
+                <img src="../assets/logo.png" alt="Logo Holberton">
+                Holberton School
+            </a>
+            <ul class="nav-menu">
+                <li class="dropdown">
+                    <a href="#" class="dropdown-toggle">Evènements</a>
+                    <div class="dropdown-menu">
+                        <a href="events_local.html">Local</a>
+                        <a href="events_france.html">France</a>
+                        <a href="events_international.html">International</a>
+                    </div>
+                </li>
+                <li class="dropdown">
+                    <a href="#" class="dropdown-toggle">Administratif</a>
+                    <div class="dropdown-menu">
+                        <a href="admin_transition_pro.html">Projet transition pro</a>
+                        <a href="admin_financement.html">Financement personnel</a>
+                        <a href="admin_pole_emploi.html">Pôle emploi</a>
+                        <a href="admin_rsa.html">RSA</a>
+                    </div>
+                </li>
+                <li class="dropdown">
+                    <a href="#" class="dropdown-toggle">Vie étudiante</a>
+                    <div class="dropdown-menu">
+                        <a href="deroule_hippocampe.html">Hippocampe</a>
+                        <a href="deroule_trimestre.html">Trimestre</a>
+                        <a href="deroule_projets_perso.html">Projets perso</a>
+                        <a href="deroule_projet_fin_annee.html">Projet fin d'année</a>
+                        <a href="deroule_projets_groupe.html">Projets de groupe</a>
+                        <a href="deroule_tasks_projets.html">Déroulement des tasks / projets</a>
+                    </div>
+                </li>
+                <li class="dropdown">
+                    <a href="#" class="dropdown-toggle">Outils</a>
+                    <div class="dropdown-menu">
+                        <a href="outils_github.html">Github c'est quoi ?</a>
+                        <a href="outils_sandbox.html">Sandbox c'est quoi ?</a>
+                        <a href="outils_betty.html">Betty</a>
+                        <a href="outils_checks.html">Checks</a>
+                    </div>
+                </li>
+            </ul>
+        </div>
+    </nav>
 
     <div class="container">
-        <a href="index.html">&larr; Retour à l'accueil</a>
-        <h2>GitHub : Comprendre et Utiliser</h2>
-        <p>Introduction à GitHub, son utilité et comment créer un compte pour vos projets Holberton.</p>
-        <!-- Ajoutez ici un guide ou des liens vers des ressources GitHub -->
+        <header>
+            <h1>
+                <img src="../assets/logo.png" alt="Logo Holberton" class="logo">
+                GitHub : Comprendre et Utiliser
+            </h1>
+        </header>
+
+        <a href="../index.html" class="back-home">← Retour à l'accueil</a>
+
+        <p>GitHub est la plateforme de référence mondiale pour l'hébergement de projets de développement et la collaboration. À Holberton School, vous utiliserez GitHub quotidiennement pour gérer vos projets individuels et de groupe. Maîtriser ses concepts et ses commandes est une compétence fondamentale.</p>
+
+        <h2>1. Qu'est-ce que GitHub et Git ? (La Différence Essentielle)</h2>
+
+        <h3>a. Git : Le Système de Contrôle de Version</h3>
+        <p><strong>Git</strong> est un **système de contrôle de version distribué**. C'est un logiciel qui tourne sur votre ordinateur local et qui permet de :</p>
+        <ul>
+            <li>**Suivre les modifications :** Il enregistre toutes les modifications apportées à vos fichiers.</li>
+            <li>**Revenir en arrière :** Vous pouvez revenir à n'importe quelle version précédente de votre code.</li>
+            <li>**Travailler en équipe :** Il gère les fusions de code de plusieurs personnes sans les écraser.</li>
+        </ul>
+        <p>Pensez à Git comme à une machine à remonter le temps pour votre code !</p>
+
+        <h3>b. GitHub : La Plateforme d'Hébergement et de Collaboration</h3>
+        <p><strong>GitHub</strong> est une **plateforme web** qui utilise Git. C'est un service en ligne qui vous permet de :</p>
+        <ul>
+            <li>**Héberger vos dépôts Git :** Vos projets Git sont stockés sur des serveurs distants.</li>
+            <li>**Collaborer :** Facilite le travail d'équipe avec des fonctionnalités comme les Pull Requests, la gestion des issues (problèmes), etc.</li>
+            <li>**Partager votre travail :** Votre code est accessible publiquement (ou privément) et sert de portfolio.</li>
+        </ul>
+        <p>GitHub est le "réseau social" des développeurs, et Git est le langage qu'ils utilisent.</p>
+
+        <h2>2. Concepts Clés de GitHub / Git à Holberton</h2>
+
+        <ul>
+            <li>**Dépôt (Repository / Repo) :** Le dossier de votre projet géré par Git. Il contient tout votre code, vos fichiers et l'historique des modifications.</li>
+            <li>**Cloner (`clone`) :** Télécharger une copie d'un dépôt distant (GitHub) sur votre machine locale.</li>
+            <li>**Ajouter (`add`) :** Préparer les fichiers modifiés pour le prochain "enregistrement" (commit). C'est la "zone de staging".</li>
+            <li>**Commiter (`commit`) :** Enregistrer une nouvelle version de vos modifications dans l'historique local de votre dépôt. C'est une "photo" de l'état de votre projet à un instant T, avec un message descriptif.</li>
+            <li>**Pousser (`push`) :** Envoyer vos commits locaux du dépôt de votre machine vers le dépôt distant sur GitHub. C'est comme "publier" vos modifications.</li>
+            <li>**Puller (`pull`) :** Récupérer les dernières modifications du dépôt distant vers votre dépôt local. C'est comme "télécharger" les mises à jour des autres membres de l'équipe.</li>
+            <li>**Branche (`branch`) :** Une ligne de développement indépendante. Vous travaillez généralement sur des branches séparées (`feature/ma-nouvelle-fonctionnalite`) avant de fusionner vos changements dans la branche principale (`main` ou `master`).</li>
+            <li>**Merge (`merge`) :** Fusionner les changements d'une branche dans une autre.</li>
+            <li>**Pull Request (PR) :** Sur GitHub, c'est une demande de fusion de votre branche vers une autre. C'est l'occasion de demander une relecture de votre code avant l'intégration.</li>
+        </ul>
+
+        <h2>3. Commandes Git Essentielles pour Débuter</h2>
+
+        <p>Voici les commandes que vous utiliserez le plus souvent :</p>
+        <ul>
+            <li>**Initialiser un nouveau dépôt (une seule fois par projet) :**
+                <pre><code>git init</code></pre>
+            </li>
+            <li>**Cloner un dépôt existant (une seule fois) :**
+                <pre><code>git clone [URL_DU_DEPOT]</code></pre>
+            </li>
+            <li>**Vérifier le statut de votre dépôt (très souvent) :**
+                <pre><code>git status</code></pre>
+            </li>
+            <li>**Ajouter tous les fichiers modifiés/nouveaux à l'index :**
+                <pre><code>git add .</code></pre>
+                <p>Ou un fichier spécifique :</p>
+                <pre><code>git add nom_du_fichier.c</code></pre>
+            </li>
+            <li>**Enregistrer vos modifications :**
+                <pre><code>git commit -m "Message descriptif de votre commit"</code></pre>
+            </li>
+            <li>**Envoyer vos commits vers GitHub (après `add` et `commit`) :**
+                <pre><code>git push</code></pre>
+                <p>Si c'est la première fois sur une nouvelle branche :</p>
+                <pre><code>git push -u origin nom-de-ma-branche</code></pre>
+            </li>
+            <li>**Récupérer les dernières modifications des autres :**
+                <pre><code>git pull</code></pre>
+            </li>
+            <li>**Changer de branche :**
+                <pre><code>git checkout nom-de-la-branche</code></pre>
+            </li>
+            <li>**Créer une nouvelle branche et s'y déplacer :**
+                <pre><code>git checkout -b nom-de-la-nouvelle-branche</code></pre>
+            </li>
+        </ul>
+
+        <h2>4. L'Importance de GitHub à Holberton</h2>
+
+        <p>À Holberton, vos projets sont directement liés à GitHub et Hippocampe. Un bon usage de Git et GitHub est essentiel pour :</p>
+        <ul>
+            <li>**La soumission de vos projets :** Les checks automatiques sont déclenchés par vos `git push`.</li>
+            <li>**La collaboration :** Pour les projets de groupe, Git et GitHub sont les outils principaux pour travailler ensemble.</li>
+            <li>**Votre portfolio :** Votre profil GitHub devient votre CV en ligne, montrant votre code et votre contribution.</li>
+            <li>**Le suivi de progression :** L'historique de vos commits et la gestion de vos branches reflètent votre rigueur.</li>
+        </ul>
+        <p>Prenez le temps de pratiquer ces commandes. Plus vous les utiliserez, plus elles deviendront naturelles !</p>
+
+        <div class="forum">
+            <p><strong>💡 Conseil :</strong> Créez votre compte GitHub dès le début de votre formation et commencez à commiter régulièrement. Votre historique de commits sera un excellent indicateur de votre progression !</p>
+        </div>
     </div>
+
     <footer>
         <p>&copy; 2025 - Site pédagogique Holberton. Tous droits réservés.</p>
+        <p><a href="#">Conditions Générales</a> | <a href="#">Politique de Confidentialité</a></p>
     </footer>
 </body>
 </html>
