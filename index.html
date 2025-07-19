@@ -1,43 +1,417 @@
 <!DOCTYPE html>
 <html lang="fr">
 <head>
+    <link rel="icon" type="image/png" href="images.png">
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Holberton - Accueil</title>
-    <link rel="stylesheet" href="../CSS/index.css">
+    <link rel="stylesheet" href="CSS/index.css">
 </head>
 <body>
+    <!-- Navbar sticky -->
+    <nav class="navbar">
+        <div class="nav-container">
+            <a href="#" class="nav-logo">
+                <img src="images.png" alt="Logo Holberton">
+                Holberton School
+            </a>
+            <ul class="nav-menu">
+                <li class="dropdown">
+                    <a href="#" class="dropdown-toggle">Evènements</a>
+                    <div class="dropdown-menu">
+                        <a href="html/events_local.html">Local</a>
+                        <a href="html/events_france.html">France</a>
+                        <a href="html/events_international.html">International</a>
+                    </div>
+                </li>
+                <li class="dropdown">
+                    <a href="#" class="dropdown-toggle">Administratif</a>
+                    <div class="dropdown-menu">
+                        <a href="html/admin_transition_pro.html">Projet transition pro</a>
+                        <a href="html/admin_financement.html">Financement personnel</a>
+                        <a href="html/admin_pole_emploi.html">Pôle emploi</a>
+                        <a href="html/admin_rsa.html">RSA</a>
+                    </div>
+                </li>
+                <li class="dropdown">
+                    <a href="#" class="dropdown-toggle">Déroulé étudiant</a>
+                    <div class="dropdown-menu">
+                        <a href="html/deroule_hippocampe.html">Hippocampe</a>
+                        <a href="html/deroule_trimestre.html">Trimestre</a>
+                        <a href="html/deroule_projets_perso.html">Projets perso</a>
+                        <a href="html/deroule_projet_fin_annee.html">Projet fin d'année</a>
+                        <a href="html/deroule_projets_groupe.html">Projets de groupe</a>
+                        <a href="html/deroule_tasks_projets.html">Déroulement des tasks / projets</a>
+                    </div>
+                </li>
+                <li class="dropdown">
+                    <a href="#" class="dropdown-toggle">Outils</a>
+                    <div class="dropdown-menu">
+                        <a href="html/outils_github.html">Github c'est quoi ? + création</a>
+                        <a href="html/outils_sandbox.html">Sandbox c'est quoi ? + création</a>
+                        <a href="html/outils_betty.html">Betty</a>
+                        <a href="html/outils_checks.html">Checks</a>
+                    </div>
+                </li>
+            </ul>
+        </div>
+    </nav>
+
     <div class="container">
-        <h2>Evènements</h2>
-        <ul>
-            <li><a href="html/events_local.html">Local</a></li>
-            <li><a href="html/events_france.html">France</a></li>
-            <li><a href="html/events_international.html">International</a></li>
-        </ul>
-        <h2>Administratif</h2>
-        <ul>
-            <li><a href="html/admin_transition_pro.html">Projet transition pro</a></li>
-            <li><a href="html/admin_financement.html">Financement personnel</a></li>
-            <li><a href="html/admin_pole_emploi.html">Pôle emploi</a></li>
-            <li><a href="html/admin_rsa.html">RSA</a></li>
-        </ul>
-        <h2>Déroulé étudiant</h2>
-        <ul>
-            <li><a href="html/deroule_hippocampe.html">Hippocampe</a></li>
-            <li><a href="html/deroule_trimestre.html">Trimestre</a></li>
-            <li><a href="html/deroule_projets_perso.html">Projets perso</a></li>
-            <li><a href="html/deroule_projet_fin_annee.html">Projet fin d'année</a></li>
-            <li><a href="html/deroule_projets_groupe.html">Projets de groupe</a></li>
-            <li><a href="html/deroule_tasks_projets.html">Déroulement des tasks / projets</a></li>
-            <li><a href="html/outils_github.html">Github c'est quoi ? + création</a></li>
-            <li><a href="html/outils_sandbox.html">Sandbox c'est quoi ? + création</a></li>
-            <li><a href="html/outils_betty.html">Betty</a></li>
-            <li><a href="html/outils_checks.html">Checks</a></li>
-        </ul>
-        <div class="forum">
-            <h2>Forum / FAQ</h2>
-            <p>Bientôt disponible !</p>
+        <h1>
+            <img src="images.png" alt="Logo Holberton" class="logo">
+            Holberton School - Guide Étudiant
+        </h1>
+        
+        <!-- Barre de recherche -->
+        <div class="search-section">
+            <h2>🔍 Recherche rapide</h2>
+            <div class="search-container">
+                <input type="text" id="searchInput" placeholder="Rechercher dans toutes les ressources..." class="search-input">
+                <button class="search-btn" id="searchBtn">Rechercher</button>
+            </div>
+            <div class="search-suggestions">
+                <span class="suggestion-tag">GitHub</span>
+                <span class="suggestion-tag">Sandbox</span>
+                <span class="suggestion-tag">Betty</span>
+                <span class="suggestion-tag">Financement</span>
+                <span class="suggestion-tag">Projets</span>
+            </div>
+            <!-- Résultats de recherche -->
+            <div class="search-results" id="searchResults" style="display: none;">
+                <h3>Résultats de recherche :</h3>
+                <div class="results-list" id="resultsList"></div>
+            </div>
+        </div>
+
+        <!-- Liens rapides -->
+        <div class="quick-links-section">
+            <h2>⚡ Liens rapides</h2>
+            <div class="quick-links-grid">
+                <a href="html/outils_github.html" class="quick-link-card">
+                    <div class="card-icon">📂</div>
+                    <h3>GitHub</h3>
+                    <p>Création et gestion</p>
+                </a>
+                <a href="html/outils_sandbox.html" class="quick-link-card">
+                    <div class="card-icon">💻</div>
+                    <h3>Sandbox</h3>
+                    <p>Environnement de dev</p>
+                </a>
+                <a href="html/outils_betty.html" class="quick-link-card">
+                    <div class="card-icon">✨</div>
+                    <h3>Betty</h3>
+                    <p>Style de code</p>
+                </a>
+                <a href="html/admin_financement.html" class="quick-link-card">
+                    <div class="card-icon">💰</div>
+                    <h3>Financement</h3>
+                    <p>Aide financière</p>
+                </a>
+                <a href="html/deroule_projets_perso.html" class="quick-link-card">
+                    <div class="card-icon">🚀</div>
+                    <h3>Projets</h3>
+                    <p>Mes projets perso</p>
+                </a>
+                <a href="html/events_local.html" class="quick-link-card">
+                    <div class="card-icon">📅</div>
+                    <h3>Événements</h3>
+                    <p>Prochains events</p>
+                </a>
+            </div>
+        </div>
+
+        <!-- Chat/Forum en direct -->
+        <div class="chat-section">
+            <h2>💬 Chat étudiant</h2>
+            <div class="chat-container">
+                <div class="chat-messages" id="chatMessages">
+                    <div class="message">
+                        <span class="user">Alice:</span>
+                        <span class="text">Salut ! Quelqu'un peut m'aider avec Betty ?</span>
+                        <span class="time">14:32</span>
+                    </div>
+                    <div class="message">
+                        <span class="user">Bob:</span>
+                        <span class="text">Bien sûr ! Quel est ton problème ?</span>
+                        <span class="time">14:35</span>
+                    </div>
+                    <div class="message">
+                        <span class="user">Charlie:</span>
+                        <span class="text">N'oubliez pas l'événement de demain ! 🎉</span>
+                        <span class="time">14:40</span>
+                    </div>
+                </div>
+                <div class="chat-input-container">
+                    <input type="text" id="chatInput" placeholder="Tapez votre message..." class="chat-input">
+                    <button class="chat-send-btn">Envoyer</button>
+                </div>
+            </div>
         </div>
     </div>
+
+    <script>
+        // Base de données des pages et contenus
+        const searchDatabase = [
+            {
+                title: "GitHub - Création et gestion",
+                description: "Apprendre à créer un compte GitHub, gérer ses repositories, faire des commits et des pull requests",
+                category: "Outils",
+                url: "html/outils_github.html",
+                keywords: ["github", "git", "repository", "commit", "pull request", "version", "code"]
+            },
+            {
+                title: "Sandbox - Environnement de développement",
+                description: "Utiliser la Sandbox Holberton pour coder et tester ses projets",
+                category: "Outils", 
+                url: "html/outils_sandbox.html",
+                keywords: ["sandbox", "environnement", "développement", "code", "test", "holberton"]
+            },
+            {
+                title: "Betty - Style de code",
+                description: "Comprendre et appliquer les règles de style Betty pour un code propre",
+                category: "Outils",
+                url: "html/outils_betty.html", 
+                keywords: ["betty", "style", "code", "règles", "norme", "propre", "indentation"]
+            },
+            {
+                title: "Checks - Vérifications",
+                description: "Utiliser les outils de vérification et de validation du code",
+                category: "Outils",
+                url: "html/outils_checks.html",
+                keywords: ["check", "vérification", "validation", "test", "debug"]
+            },
+            {
+                title: "Financement personnel",
+                description: "Informations sur les aides financières et bourses disponibles",
+                category: "Administratif",
+                url: "html/admin_financement.html",
+                keywords: ["financement", "bourse", "aide", "financière", "argent", "étudiant"]
+            },
+            {
+                title: "Pôle emploi",
+                description: "Démarches et informations concernant Pôle emploi",
+                category: "Administratif", 
+                url: "html/admin_pole_emploi.html",
+                keywords: ["pôle emploi", "chômage", "formation", "aide", "travail"]
+            },
+            {
+                title: "RSA",
+                description: "Informations sur le RSA et les démarches administratives",
+                category: "Administratif",
+                url: "html/admin_rsa.html", 
+                keywords: ["rsa", "revenu", "solidarité", "active", "aide", "social"]
+            },
+            {
+                title: "Projet transition pro",
+                description: "Tout savoir sur le projet de transition professionnelle",
+                category: "Administratif",
+                url: "html/admin_transition_pro.html",
+                keywords: ["transition", "professionnel", "reconversion", "formation", "projet"]
+            },
+            {
+                title: "Hippocampe",
+                description: "Le système Hippocampe et son fonctionnement",
+                category: "Déroulé étudiant",
+                url: "html/deroule_hippocampe.html",
+                keywords: ["hippocampe", "système", "plateforme", "exercices"]
+            },
+            {
+                title: "Trimestre",
+                description: "Organisation et déroulement d'un trimestre à Holberton",
+                category: "Déroulé étudiant",
+                url: "html/deroule_trimestre.html",
+                keywords: ["trimestre", "organisation", "planning", "semestre"]
+            },
+            {
+                title: "Projets personnels",
+                description: "Guide pour les projets personnels et portfolio",
+                category: "Déroulé étudiant", 
+                url: "html/deroule_projets_perso.html",
+                keywords: ["projet", "personnel", "portfolio", "individuel"]
+            },
+            {
+                title: "Projet fin d'année",
+                description: "Informations sur le projet de fin d'année",
+                category: "Déroulé étudiant",
+                url: "html/deroule_projet_fin_annee.html",
+                keywords: ["projet", "fin", "année", "final", "soutenance"]
+            },
+            {
+                title: "Projets de groupe", 
+                description: "Travail en équipe et gestion des projets de groupe",
+                category: "Déroulé étudiant",
+                url: "html/deroule_projets_groupe.html",
+                keywords: ["projet", "groupe", "équipe", "collaboration", "team"]
+            },
+            {
+                title: "Déroulement des tasks / projets",
+                description: "Comment se déroulent les tasks et projets quotidiens",
+                category: "Déroulé étudiant",
+                url: "html/deroule_tasks_projets.html", 
+                keywords: ["task", "projet", "déroulement", "quotidien", "exercice"]
+            },
+            {
+                title: "Événements locaux",
+                description: "Événements et meetups dans votre région",
+                category: "Événements",
+                url: "html/events_local.html",
+                keywords: ["événement", "local", "meetup", "région", "rencontre"]
+            },
+            {
+                title: "Événements France",
+                description: "Événements nationaux en France",
+                category: "Événements", 
+                url: "html/events_france.html",
+                keywords: ["événement", "france", "national", "conférence"]
+            },
+            {
+                title: "Événements internationaux",
+                description: "Événements tech internationaux et opportunités",
+                category: "Événements",
+                url: "html/events_international.html",
+                keywords: ["événement", "international", "tech", "mondial", "opportunité"]
+            }
+        ];
+
+        // Fonction de recherche
+        function performSearch(query) {
+            if (!query || query.length < 2) {
+                hideSearchResults();
+                return;
+            }
+
+            const searchTerm = query.toLowerCase();
+            const results = searchDatabase.filter(item => {
+                return item.title.toLowerCase().includes(searchTerm) ||
+                       item.description.toLowerCase().includes(searchTerm) ||
+                       item.category.toLowerCase().includes(searchTerm) ||
+                       item.keywords.some(keyword => keyword.toLowerCase().includes(searchTerm));
+            });
+
+            displaySearchResults(results, query);
+        }
+
+        // Afficher les résultats
+        function displaySearchResults(results, query) {
+            const resultsContainer = document.getElementById('searchResults');
+            const resultsList = document.getElementById('resultsList');
+            
+            if (results.length === 0) {
+                resultsList.innerHTML = `
+                    <div class="no-results">
+                        Aucun résultat trouvé pour "${query}"<br>
+                        Essayez avec d'autres mots-clés comme "github", "betty", "financement"...
+                    </div>
+                `;
+            } else {
+                resultsList.innerHTML = results.map(result => `
+                    <div class="result-item" onclick="window.location.href='${result.url}'">
+                        <div class="result-title">${result.title}</div>
+                        <div class="result-description">${result.description}</div>
+                        <span class="result-category">${result.category}</span>
+                    </div>
+                `).join('');
+            }
+            
+            resultsContainer.style.display = 'block';
+        }
+
+        // Cacher les résultats
+        function hideSearchResults() {
+            document.getElementById('searchResults').style.display = 'none';
+        }
+
+        // Event listeners pour la recherche
+        const searchInput = document.getElementById('searchInput');
+        const searchBtn = document.getElementById('searchBtn');
+
+        // Recherche en temps réel (avec délai)
+        let searchTimeout;
+        searchInput.addEventListener('input', function(e) {
+            clearTimeout(searchTimeout);
+            searchTimeout = setTimeout(() => {
+                performSearch(e.target.value);
+            }, 300); // Délai de 300ms pour éviter trop de recherches
+        });
+
+        // Recherche au clic sur le bouton
+        searchBtn.addEventListener('click', function() {
+            performSearch(searchInput.value);
+        });
+
+        // Recherche à l'appui sur Entrée
+        searchInput.addEventListener('keypress', function(e) {
+            if (e.key === 'Enter') {
+                performSearch(e.target.value);
+            }
+        });
+
+        // Tags de suggestion cliquables
+        document.querySelectorAll('.suggestion-tag').forEach(tag => {
+            tag.addEventListener('click', function() {
+                const searchTerm = this.textContent;
+                searchInput.value = searchTerm;
+                performSearch(searchTerm);
+            });
+        });
+
+        // Cacher les résultats si on clique ailleurs
+        document.addEventListener('click', function(e) {
+            if (!e.target.closest('.search-section')) {
+                hideSearchResults();
+            }
+        });
+
+        // Chat interactif (code existant)
+        const chatInput = document.getElementById('chatInput');
+        const chatMessages = document.getElementById('chatMessages');
+        const sendBtn = document.querySelector('.chat-send-btn');
+
+        function addMessage(user, text) {
+            const message = document.createElement('div');
+            message.className = 'message';
+            const now = new Date();
+            const time = now.getHours().toString().padStart(2, '0') + ':' + 
+                        now.getMinutes().toString().padStart(2, '0');
+            
+            message.innerHTML = `
+                <span class="user">${user}:</span>
+                <span class="text">${text}</span>
+                <span class="time">${time}</span>
+            `;
+            
+            chatMessages.appendChild(message);
+            chatMessages.scrollTop = chatMessages.scrollHeight;
+        }
+
+        function sendMessage() {
+            const text = chatInput.value.trim();
+            if (text) {
+                addMessage('Vous', text);
+                chatInput.value = '';
+                
+                // Réponse automatique après 1 seconde
+                setTimeout(() => {
+                    const responses = [
+                        'Merci pour votre message !',
+                        'C\'est une bonne question !',
+                        'Je vais regarder ça 👍',
+                        'Excellente idée !',
+                        'N\'hésitez pas si vous avez d\'autres questions !'
+                    ];
+                    const randomResponse = responses[Math.floor(Math.random() * responses.length)];
+                    addMessage('Assistant', randomResponse);
+                }, 1000);
+            }
+        }
+
+        sendBtn.addEventListener('click', sendMessage);
+        chatInput.addEventListener('keypress', function(e) {
+            if (e.key === 'Enter') {
+                sendMessage();
+            }
+        });
+    </script>
 </body>
 </html>
